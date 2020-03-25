@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <link type="text/css" href="./app.css" rel="stylesheet"/>
+    </head>
+    <body>
+            
+        <h1 id="heading">My Electron App</h1>
+
+        <div id="somecontainer">
+            <form id="currency-form">
+               <span>Enter currency:</span> 
+                <input type="number" id="fromCurrency" placeholder="Enter your currency in Dollars" required/>
+                <input type="submit"/>
+            </form>
+        </div>
+        <div id="output"></div>
+    </body>
+    <script>
+        const convertToRupees = (dollar)=> dollar * 75.74;
+        document.getElementById("currency-form").onsubmit = function(e){
+            e.preventDefault();
+            let val = e.target.elements.fromCurrency.value;
+            document.getElementById('output').innerHTML = `You had entered $${val}. Value in INR is  ₹${convertToRupees(val)}`;
+            e.target.elements.fromCurrency.value = '';
+        }
+    </script>
+</html>

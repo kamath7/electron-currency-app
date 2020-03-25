@@ -1,0 +1,16 @@
+{
+  "name": "test-app-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^8.2.0",
+    "electron-reload": "^1.5.0"
+  }
+}
